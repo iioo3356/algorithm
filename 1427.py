@@ -1,0 +1,5 @@
+n = input()
+arr = list(n)
+print(arr)
+arr.sort(reverse = True)
+print(''.join(arr))
