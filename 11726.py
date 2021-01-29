@@ -10,7 +10,7 @@
 #         return d[n]
 
 # n = int(input())
-# print(dp(n)) --> Recursion error 발생, 수정
+# print(dp(n)) --> Recursion error 발생, 수정.
 #------------------------------------------------------
 arr = [0] * 1001
 n = int(input())
