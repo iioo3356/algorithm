@@ -12,7 +12,7 @@
 # n = int(input())
 # print(dp(n)) --> Recursion error 발생, 수정.
 #------------------------------------------------------
-= [0] * 1001
+d = [0] * 1001
 n = int(input())
 for i in range(n+1):
     if i < 3:
