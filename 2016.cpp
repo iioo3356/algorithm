@@ -1,6 +1,6 @@
+// 프로그래머스 2016년
 #include <string>
 #include <vector>
-
 using namespace std;
 
 string solution(int a, int b) {
@@ -9,7 +9,7 @@ string solution(int a, int b) {
     int month[] = {31,29,31,30,31,30,31,31,30,31,30,31};
     int sumDay = 0;
     for (int i=0;i<a-1;i++){
-        sumDay += month[i+1];
+        sumDay += month[i];
     }
     sumDay += b-1;
     answer = day[sumDay%7];
