@@ -1,7 +1,7 @@
+// 프로그래머스 가장 큰 수
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <iostream>
 using namespace std;
 bool cmp(string a, string b){
     string mod_a;
@@ -23,6 +23,10 @@ string solution(vector<int> numbers) {
     sort(strings.begin(), strings.end(), cmp);
     for (int i=0;i<strings.size();i++){
         answer += strings[i];
+    }
+    while (answer[0] == '0'){
+        if (answer.size() ==1 )break;
+        answer.erase(0,1);
     }
     return answer;
 }
