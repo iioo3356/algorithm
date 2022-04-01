@@ -1,4 +1,4 @@
-#include <iostream>
+// 프로그래머스 압축
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -27,12 +27,7 @@ vector<int> solution(string msg) {
         answer.push_back(um[findStr]);
         um[current] = num;
         num++;
-        if (i<msg.size()){
-            msg = msg.substr(i-1, msg.size());
-        }
-        else {
-            break;
-        }
+        msg = msg.substr(i-1, msg.size());
    
     }
     return answer;
