@@ -1,3 +1,4 @@
+// 프로그래머스 프렌즈4블록
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -18,10 +19,7 @@ int solution(int m, int n, vector<string> board) {
             }            
         }
         if (remove_idx.size() == 0) break;
-        remove_idx.erase(unique(remove_idx.begin(),remove_idx.end()),remove_idx.end());
-
         for (int i=0;i<remove_idx.size();i++){
-            answer++;
             board[remove_idx[i].first][remove_idx[i].second] = '!';
         }
         for (int i=m-1; i>= 0; i--) {
@@ -36,6 +34,11 @@ int solution(int m, int n, vector<string> board) {
                     }
                 }
             }
+        }
+    }
+    for (int i=0;i<m;i++){
+        for (int j=0;j<n;j++){
+            if (board[i][j] == '!') answer++;
         }
     }
     return answer;
