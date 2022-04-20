@@ -1,4 +1,4 @@
-// 프로그래머스 행렬 회전하기
+// 프로그래머스 행렬 테두리 회전하기
 #include <iostream>
 #include <string>
 #include <vector>
