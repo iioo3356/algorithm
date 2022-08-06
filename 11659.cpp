@@ -10,19 +10,17 @@ int main(){
     int n, m;
     cin >> n >> m;
     vector<int> v;
-    for (int i=0;i<n;i++){
+    vector<int> dp = {0,};
+    for (int i=1;i<=n;i++){
         int num;
         cin >> num;
         v.push_back(num);
+        dp.push_back(dp[i-1]+num);
     }
     for (int i=0;i<m;i++){
         int ii, jj;
-        int s = 0;
         cin >> ii >> jj;
-        for (int j=ii-1;j<jj;j++){
-            s += v[j];
-        }
-        cout << s << "\n";
+        cout << dp[jj] - dp[ii-1] << "\n";
     }
     return 0;
 }
