@@ -1,9 +1,13 @@
+// boj 11279 최대힙
 #include <queue>
 #include <iostream>
 using namespace std;
  
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     priority_queue<long long int> pq;
     int n;
     cin >> n;
