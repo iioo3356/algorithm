@@ -4,10 +4,10 @@ function solution(str_list) {
     let lIdx = str_list.indexOf("l");
     let rIdx = str_list.indexOf("r");
 
-    if (rIdx === -1 || lIdx < rIdx) {
+    if (lIdx > -1 && (rIdx === -1 || lIdx < rIdx)) {
         answer = str_list.slice(0, lIdx);
     } 
-    else if (lIdx === -1 || lIdx > rIdx) {
+    else if (rIdx > -1 && (lIdx === -1 || lIdx > rIdx)) {
         answer = str_list.slice(rIdx+1);
     }
     return answer;
