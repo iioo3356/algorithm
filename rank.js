@@ -1,12 +1,19 @@
+// 프로그래머스 등수 매기기
 function solution(score) {
     var answer = [];
     const rank = {}
-    const rankScore = new Array(...score).sort((a, b)=> (b[0]+b[1])/2 - (a[0]+a[1])/2);
-    for (let i=0;i<rankScore.length;i++){
-        rank[rankScore[i]] = i+1;
+    const averageScore = score.map((item)=>((item[0]+item[1])/2)).sort((a,b)=>b-a);
+    let current = 1;
+    for (let i=0;i<averageScore.length;i++){
+        if (!rank[averageScore[i]]){
+            rank[averageScore[i]] = current;        
+        }            
+        current++;
+
     }
     for (let i=0;i<score.length;i++){
-        answer.push(rank[score[i]]);
+        const average = (score[i][0]+score[i][1])/2;
+        answer.push(rank[average]);
     }
     return answer;
 }
