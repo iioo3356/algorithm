@@ -1,3 +1,4 @@
+# 네트워크 
 def solution(n, computers):
     answer = 0
     visited = [False for i in range(n)]
@@ -11,5 +12,5 @@ def dfs(computers, n, cur, visited):
     visited[cur] = True
     for i in range(n):
         if i != cur and computers[cur][i] == 1:
-            if visited == False:
-                dfs(coumputers, n, i, visited)
+            if visited[i] == False:
+                dfs(computers, n, i, visited)
