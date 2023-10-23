@@ -8,7 +8,7 @@ def solution(n, computers):
     return answer
 
 def dfs(computers, n, cur, visited):
-    visited[cur] == True
+    visited[cur] = True
     for i in range(n):
         if i != cur and computers[cur][i] == 1:
             if visited == False:
