@@ -20,7 +20,7 @@ def solution(begin, target, words):
                 count = 0
                 for i in range(len(word)):
                     if (word[i] != cWord[i]):
-                        count+=1a
+                        count+=1
                         
                 if (count == 1):
                     q.append([word, cCount+1])
