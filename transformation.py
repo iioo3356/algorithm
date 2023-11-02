@@ -1,3 +1,4 @@
+# 단어 변환
 from collections import deque
 
 def solution(begin, target, words):
@@ -14,7 +15,8 @@ def solution(begin, target, words):
             cWord = item[0]
             cCount = item[1]
             if cWord == target:
-                return cCount
+                answer = cCount
+                break
             
             for word in words:            
                 count = 0
