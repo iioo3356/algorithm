@@ -1,11 +1,11 @@
+# PCCP 기출문제 1번 / 붕대 감기
 def solution(bandage, health, attacks):
     answer = health
     maxHealth = health
     nextAttackIdx = 0
     now = 0
     combo = 1
-    while (nextAttackIdx < len(attacks) and health > 0):
-        # print("now", now)
+    while (nextAttackIdx < len(attacks) and answer > 0):
         if (now == attacks[nextAttackIdx][0]):
             answer-=attacks[nextAttackIdx][1]
             nextAttackIdx += 1
@@ -18,7 +18,6 @@ def solution(bandage, health, attacks):
                 answer = min(maxHealth, answer + bandage[1])
                 combo += 1
         now += 1           
-        # print("answer", answer)
 
     if (answer <= 0):
         return -1
