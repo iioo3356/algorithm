@@ -4,7 +4,7 @@ def solution(id_list, report, k):
     g = [[False for i in range(len(id_list))] for i in range(len(id_list))] # g[i][j] = i가 j에게 신고 당했는지 여부
     banNo = [] # 정지될 회원 번호
     
-    for r in report:
+    for r in set(report):
         [userId, reportId] = r.split(" ")
         userNo = id_list.index(userId)
         reportNo = id_list.index(reportId)
