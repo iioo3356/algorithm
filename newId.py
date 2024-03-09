@@ -25,8 +25,6 @@ def solution(new_id):
             
         if (len(answer) >= 16):
             answer = answer[0:15]
-            if (answer[0] == "."):
-                answer = answer[1:]
             if (answer[len(answer)-1] == "."):
                 answer = answer[0:len(answer)-1]
         if (len(answer) < 3):
